@@ -7,6 +7,7 @@
         Application to organize the logistics including spaceship and space crew
     """,
     'author': "Mehdi Tepava",
+    'images' : ['static/src/description/icon.png'],
     'category': 'Uncategorized',
     'version': '0.1',
     'depends': ['base','space_mission_library_management','space_mission_shop_volunteer'],
@@ -20,4 +21,5 @@
         #'demo/demo.xml',
     ],
     'license': 'LGPL-3',
+    'application': True
 }
