@@ -1,15 +1,15 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "Space Mission (MT)",
+    'name': "Space Mission Shop & Volunteer organization (MT)",
     'summary': """
         Space mission for ODoo training (MT)""",
     'description': """
-        Application to organize the logistics including spaceship and space crew
+        Library management for the space mission
     """,
     'author': "Mehdi Tepava",
     'category': 'Uncategorized',
     'version': '0.1',
-    'depends': ['base','space_mission_library_management','space_mission_shop_volunteer'],
+    'depends': ['base'],
     'data': [
         #'security/ir.model.access.csv',
         #'views/settings.xml',

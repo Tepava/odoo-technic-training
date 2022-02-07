@@ -9,7 +9,7 @@
     'author': "Mehdi Tepava",
     'category': 'Uncategorized',
     'version': '0.1',
-    'depends': ['base','sale_management'],
+    'depends': ['base','space_mission_library_management','space_mission_shop_volunteer'],
     'data': [
         #'security/ir.model.access.csv',
         #'views/settings.xml',
