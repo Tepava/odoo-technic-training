@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
 
 from . import spaceships
-from . import book
-from . import task
+from . import library
+from . import cooperative_volunteer
