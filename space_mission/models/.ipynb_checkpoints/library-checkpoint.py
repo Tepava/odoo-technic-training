@@ -12,7 +12,7 @@ class Library(models.Model):
     editor = fields.Char(string='Editor')
     publisher = fields.Char(string='Publisher')
     year_edition = fields.Integer(string='Year')
-    isbn = fields.Integer(string='ISBN')
+    isbn = fields.Char(string='ISBN')
     genre = fields.Char(string='Genre')
     
     
