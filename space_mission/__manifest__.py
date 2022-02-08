@@ -10,7 +10,7 @@
     'images' : ['static/src/description/icon.png'],
     'category': 'Uncategorized',
     'version': '0.1',
-    'depends': ['base','space_mission_library_management','space_mission_shop_volunteer'],
+    'depends': ['base'],
     'data': [
         #'security/ir.model.access.csv',
         #'views/settings.xml',
