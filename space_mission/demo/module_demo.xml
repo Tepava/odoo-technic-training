@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <data noupdate="1">
+    <data noupdate="0">
         <!--spaceship-->
         <!--
         <record model="space.spaceships" id="large_ships_01">
@@ -32,14 +32,13 @@
         -->
         
         <!--Library-->
-        <!--
         <record model="space.library" id="book_01">
             <field name="name">TJ of last world</field>
             <field name="author">Carl Mayer</field>
             <field name="editor">Frankpox</field>
             <field name="publisher">Little book</field>
             <field name="year_edition">2018</field>
-            <field name="isbn">j'ai29216498716</field>
+            <field name="isbn">29216498716</field>
             <field name="genre">Fantastic,Comedy</field>
         </record>
         
@@ -82,8 +81,8 @@
             <field name="isbn">3698517619</field>
             <field name="genre">Learning</field>
         </record>
-        -->
         <!--Task-->
+        <!--
         <record model="space.cooperative.volunteers" id="time9_12">
             <field name="name">Vegetables work</field>
             <field name="task_type">Food</field>
@@ -125,6 +124,6 @@
             <field name="frequency">2</field>
             <field name="volunteer">3</field>
         </record>
-        
+        -->
     </data>
 </odoo>

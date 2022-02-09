@@ -12,12 +12,14 @@
     'version': '0.1',
     'depends': ['base'],
     'data': [
-
+        'security/space_mission_security.xml',
+        'security/ir.model.access.csv'
     ],
     # only loaded in demonstration mode
     'demo': [
-        'demo/module_demo.xml',
+        'demo/module_demo.xml'
     ],
+    
     'license': 'LGPL-3',
-    'application': True
+    'application': True,
 }
