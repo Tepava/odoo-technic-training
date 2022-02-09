@@ -13,7 +13,8 @@
     'depends': ['base'],
     'data': [
         'security/space_mission_security.xml',
-        'security/ir.model.access.csv'
+        'security/ir.model.access.csv',
+        'views/space_mission_menuitems.xml',
     ],
     # only loaded in demonstration mode
     'demo': [
