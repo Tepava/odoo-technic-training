@@ -35,14 +35,15 @@
             </field>
         </record>
         
-        <menuitem name="Space Mission" id="menu_ships" sequence="1" web_icon="space_mission,static/description/ships.png"/>
+        <menuitem name="Ships" id="menu_ships" sequence="1" web_icon="space_mission,static/description/ships.png"/>
         <menuitem id="menu_ships_sub" name="Ships" parent="menu_ships" sequence="2" action="ships_list_action"/>
         
-        <menuitem name="Space Mission" id="menu_cooperative" sequence="1" web_icon="space_mission,static/description/cooperative.png"/>
+
+        <menuitem name="Cooperative" id="menu_cooperative" sequence="1" web_icon="space_mission,static/description/cooperative.png"/>
         <menuitem id="menu_cooperative_sub" name="Cooperative" parent="menu_cooperative" sequence="2" action="task_list_action"/>  
         
-        <menuitem name="Space Mission" id="menu_library" sequence="1" web_icon="space_mission,static/description/library.png"/>
+        <menuitem name="Library" id="menu_library" sequence="1" web_icon="space_mission,static/description/library.png"/>
         <menuitem id="menu_library_sub" name="Library" parent="menu_library" sequence="2" action="library_list_action"/>
-        
+
     </data>
 </odoo>

@@ -2,7 +2,6 @@
 <odoo>
     <data noupdate="0">
         <!--spaceship-->
-        <!--
         <record model="space.spaceships" id="large_ships_01">
             <field name="name">Titanium 7.0</field>
             <field name="length">8.24</field>
@@ -29,7 +28,6 @@
             <field name="ship_type">Small</field>
             <field name="ship_type">7</field>
         </record>
-        -->
         
         <!--Library-->
         <record model="space.library" id="book_01">
@@ -82,7 +80,6 @@
             <field name="genre">Learning</field>
         </record>
         <!--Task-->
-        <!--
         <record model="space.cooperative.volunteers" id="time9_12">
             <field name="name">Vegetables work</field>
             <field name="task_type">Food</field>
@@ -124,6 +121,5 @@
             <field name="frequency">2</field>
             <field name="volunteer">3</field>
         </record>
-        -->
     </data>
 </odoo>
