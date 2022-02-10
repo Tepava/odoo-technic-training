@@ -8,7 +8,7 @@
             <field name="height">57.9</field>
             <field name="fuel">Gasoil</field>
             <field name="ship_type">Large</field>
-            <field name="ship_type">29</field>
+            <field name="number_passenger">29</field>
         </record>
         
         <record model="space.spaceships" id="large_ships_02">
@@ -17,7 +17,7 @@
             <field name="height">118.9</field>
             <field name="fuel">Gasoil</field>
             <field name="ship_type">Large</field>
-            <field name="ship_type">70</field>
+            <field name="number_passenger">70</field>
         </record>
         
         <record model="space.spaceships" id="small_ships_01">
@@ -26,7 +26,7 @@
             <field name="height">40.9</field>
             <field name="fuel">Gasoil</field>
             <field name="ship_type">Small</field>
-            <field name="ship_type">7</field>
+            <field name="number_passenger">7</field>
         </record>
         
         <!--Library-->

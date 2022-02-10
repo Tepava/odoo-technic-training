@@ -11,8 +11,9 @@ class Library(models.Model):
     author = fields.Char(string='Author')
     editor = fields.Char(string='Editor')
     publisher = fields.Char(string='Publisher')
-    year_edition = fields.Integer(string='Year')
+    year_edition = fields.Char(string='Year')
     isbn = fields.Char(string='ISBN')
     genre = fields.Char(string='Genre')
+    book_note = fields.Text(string="Book Note")
     
     

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- list -->
+        <record model="ir.ui.view" id="cooperative_view_list">
+            <field name="name">space.cooperative.list</field>
+            <field name="model">space.cooperative.volunteers</field>
+            <field name="arch" type="xml">
+                <tree string="Ship List">
+                    <field name="name"/>
+                    <field name="task_type"/>
+                </tree>
+            </field>
+        </record>
+        <!-- form -->
+        <record model="ir.ui.view" id="cooperative_view_form">
+            <field name="name">space.cooperative.form</field>
+            <field name="model">space.cooperative.volunteers</field>
+            <field name="arch" type="xml">
+                <form string="Library Form">
+                    <header>
+                        <field class="oe_left" name="start_time"/>
+                        <field class="oe_left" name="stop_time"/> 
+                    </header>
+                    <sheet>
+                        <h1 style="width:30%%"><field name="name"/></h1>
+                        <group>
+                            <group string="Timer">
+                                <field name="volunteer"/>
+                                <field name="task_type"/>
+                                <field name="task_repeat"/>
+                                <field name="frequency"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Note">
+                                <field name="task_description" style=' max-width: 1150px;  width: 500px'/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <!-- search -->
+        <record model="ir.ui.view" id="cooperative_view_search">
+            <field name="name">space.cooperative.search</field>
+            <field name="model">space.cooperative.volunteers</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name"/>
+                    <field name="task_description"/>
+                </search>
+            </field>
+        </record>
+    </data>
+</odoo>

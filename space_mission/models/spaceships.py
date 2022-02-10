@@ -14,8 +14,8 @@ class Spaceships(models.Model):
     fuel = fields.Char(string='Fuel Type')
     ship_type = fields.Char(string='Ship Type')
     number_passenger = fields.Integer(string='Number of passenger')
-    model = fields.Char(string="model")
-    constructor = fields.Char(string="Constructor")
+    model = fields.Char(string="Model")
+    constructors = fields.Char(string="Constructor")
     isActive = fields.Boolean(string="Ready",default=False)
     status = fields.Selection(string='Statut',
                              selection=[('developement','In developpement'),
@@ -26,4 +26,4 @@ class Spaceships(models.Model):
     @api.depends('length','height')
     def _compute_dimension(self):
         for record in self:
-            record.total= record.length * record.height
+            record.size= record.length * record.height

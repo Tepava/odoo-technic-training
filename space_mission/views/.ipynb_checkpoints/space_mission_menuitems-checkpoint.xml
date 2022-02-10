@@ -14,7 +14,7 @@
         </record>
         
         <record model="ir.actions.act_window" id="task_list_action">
-            <field name="name">Cooperative</field>
+            <field name="name">Cooperatives</field>
             <field name="res_model">space.cooperative.volunteers</field>
             <field name="view_mode">tree,form</field>
             <field name="help" type="html">
@@ -39,7 +39,7 @@
         <menuitem id="menu_ships_sub" name="Ships" parent="menu_ships" sequence="2" action="ships_list_action"/>
         
 
-        <menuitem name="Cooperative" id="menu_cooperative" sequence="1" web_icon="space_mission,static/description/cooperative.png"/>
+        <menuitem name="Cooperatives" id="menu_cooperative" sequence="1" web_icon="space_mission,static/description/cooperative.png"/>
         <menuitem id="menu_cooperative_sub" name="Cooperative" parent="menu_cooperative" sequence="2" action="task_list_action"/>  
         
         <menuitem name="Library" id="menu_library" sequence="1" web_icon="space_mission,static/description/library.png"/>

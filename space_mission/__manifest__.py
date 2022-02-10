@@ -15,6 +15,9 @@
         'security/space_mission_security.xml',
         'security/ir.model.access.csv',
         'views/space_mission_menuitems.xml',
+        'views/ship_view.xml',
+        'views/library_view.xml',
+        'views/cooperative_view.xml'
     ],
     # only loaded in demonstration mode
     'demo': [

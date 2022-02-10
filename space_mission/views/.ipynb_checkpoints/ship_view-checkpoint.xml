@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- ship -->
+        <record model="ir.ui.view" id="ships_view_list">
+            <field name="name">space.spaceships.list</field>
+            <field name="model">space.spaceships</field>
+            <field name="arch" type="xml">
+                <tree string="Ship List">
+                    <field name="name"/>
+                    <field name="number_passenger"/>
+                    <field name="ship_type"/>
+                </tree>
+            </field>
+        </record>
+        
+        <record model="ir.ui.view" id="ships_view_form">
+            <field name="name">space.spaceships.form</field>
+            <field name="model">space.spaceships</field>
+            <field name="arch" type="xml">
+                <form string="Ship Form">
+                    <sheet>
+                        <h1><field name="name"/></h1>
+                        <group>
+                            <group string="Information">
+                                <field name="model"/>
+                                <field name="constructors"/>
+                                <field name="ship_type"/>
+                                <field name="number_passenger"/>
+                                <field name="fuel"/>
+                            </group>
+                            <group string="Statut">
+                                <field name="status"/>
+                                <field name="isActive"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Details">
+                                <group string="Ship Size">
+                                    <field name="length"/>
+                                    <field name="height"/>
+                                    <field name="size"/>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+    </data>
+</odoo>
