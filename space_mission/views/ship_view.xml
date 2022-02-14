@@ -38,7 +38,7 @@
                             <page string="Details">
                                 <group string="Ship Size">
                                     <field name="length"/>
-                                    <field name="height"/>
+                                    <field name="width"/>
                                     <field name="size"/>
                                 </group>
                             </page>

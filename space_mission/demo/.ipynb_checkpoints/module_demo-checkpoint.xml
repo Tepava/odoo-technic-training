@@ -5,7 +5,7 @@
         <record model="space.spaceships" id="large_ships_01">
             <field name="name">Titanium 7.0</field>
             <field name="length">8.24</field>
-            <field name="height">57.9</field>
+            <field name="width">57.9</field>
             <field name="fuel">Gasoil</field>
             <field name="ship_type">Large</field>
             <field name="number_passenger">29</field>
@@ -14,7 +14,7 @@
         <record model="space.spaceships" id="large_ships_02">
             <field name="name">Gargantuax</field>
             <field name="length">12.24</field>
-            <field name="height">118.9</field>
+            <field name="width">118.9</field>
             <field name="fuel">Gasoil</field>
             <field name="ship_type">Large</field>
             <field name="number_passenger">70</field>
@@ -23,7 +23,7 @@
         <record model="space.spaceships" id="small_ships_01">
             <field name="name">Titin</field>
             <field name="length">6.24</field>
-            <field name="height">40.9</field>
+            <field name="width">40.9</field>
             <field name="fuel">Gasoil</field>
             <field name="ship_type">Small</field>
             <field name="number_passenger">7</field>

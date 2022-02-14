@@ -17,8 +17,14 @@ class CooperativeVolunteers(models.Model):
     task_repeat = fields.Boolean(string='Repeat Task', default=False)
     frequency = fields.Integer(string='Number of repetition', default=0)
     #will be replace after by user with a related fields
-    volunteer = fields.Selection(string='Volunteer',selection=[('1','Jean Marc'),('2','Isabella'),('3','Kevin')])                        
+    volunteer = fields.Selection(string='Volunteer',selection=[('1','Jean Marc'),('2','Isabella'),('3','Kevin'),('4','Bertrand'),('5','Cécilia'),('6','Historia')])                        
+    leader = fields.Selection(string='Leader', selection=[('1','Finéas'),('2','Andrew'),('3','Rosa')])
+    state = fields.Selection(string='State',selection=[('draft','Draft'),('ready','Ready'),('in_progress','In Progress'),('finished','Finished')], default='draft')
     
-    
+    @api.onchange('leader')
+    def _state_status(self):
+        for record in self:
+            if record.leader and record.state == 'draft':
+                record.state = 'ready'
     
     

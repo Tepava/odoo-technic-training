@@ -19,17 +19,22 @@
             <field name="arch" type="xml">
                 <form string="Library Form">
                     <header>
-                        <field class="oe_left" name="start_time"/>
-                        <field class="oe_left" name="stop_time"/> 
+                         
                     </header>
                     <sheet>
                         <h1 style="width:30%%"><field name="name"/></h1>
                         <group>
-                            <group string="Timer">
+                            <group string="Task Information">
                                 <field name="volunteer"/>
                                 <field name="task_type"/>
                                 <field name="task_repeat"/>
                                 <field name="frequency"/>
+                            </group>
+                            <group string="Timer">
+                                <field class="oe_left" name="leader"/>
+                                <field class="oe_left" name="state"/>
+                                <field class="oe_left" name="start_time"/>
+                                <field class="oe_left" name="stop_time"/>
                             </group>
                         </group>
                         <notebook>

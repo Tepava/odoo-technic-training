@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from odoo import models, fields, api
+from odoo.exceptions import ValidationError 
 
 class Spaceships(models.Model):
     
@@ -9,7 +10,7 @@ class Spaceships(models.Model):
     
     name = fields.Char(string='Name', required=True)
     length = fields.Float(string='Lenght')
-    height = fields.Float(string='Height')
+    width = fields.Float(string='width')
     size = fields.Float(compute='_compute_dimension',readonly=True)
     fuel = fields.Char(string='Fuel Type')
     ship_type = fields.Char(string='Ship Type')
@@ -23,7 +24,19 @@ class Spaceships(models.Model):
                                         ('finished','Finished')],
                              copy=False)
     
-    @api.depends('length','height')
+    @api.depends('length','width')
     def _compute_dimension(self):
         for record in self:
-            record.size= record.length * record.height
+            record.size= record.length * record.width
+    
+    @api.constrains('length','width')
+    def _height_verification_inferior(self):
+        for record in self:
+            if record.width > record.length:
+                raise ValidationError("Height can't be superior than length !")
+                
+    @api.constrains('length','width')
+    def _height_verification_equal(self):
+        for record in self:
+            if record.width == record.length:
+                raise ValidationError("Height can't be equal to length !")
