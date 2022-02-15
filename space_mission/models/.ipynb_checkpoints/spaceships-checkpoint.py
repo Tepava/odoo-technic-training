@@ -24,6 +24,8 @@ class Spaceships(models.Model):
                                         ('finished','Finished')],
                              copy=False)
     
+    mission_id = fields.One2many(comodel_name='space.missions', inverse_name='spaceship_ids', string='Mission')
+    
     @api.depends('length','width')
     def _compute_dimension(self):
         for record in self:

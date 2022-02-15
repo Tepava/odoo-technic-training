@@ -14,7 +14,7 @@
         </record>
         
         <record model="ir.actions.act_window" id="task_list_action">
-            <field name="name">Cooperatives</field>
+            <field name="name">Task</field>
             <field name="res_model">space.cooperative.volunteers</field>
             <field name="view_mode">tree,form</field>
             <field name="help" type="html">
@@ -35,12 +35,39 @@
             </field>
         </record>
         
+        <record model="ir.actions.act_window" id="missions_list_action">
+            <field name="name">Missions</field>
+            <field name="res_model">space.missions</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Add a Missions
+                </p>
+            </field>
+        </record>
+        
+        <record model="ir.actions.act_window" id="rental_list_action">
+            <field name="name">Rental</field>
+            <field name="res_model">space.library.rental</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Add a Renatal
+                </p>
+            </field>
+        </record>
+        
+        <menuitem name="Rental" id="menu_rental" sequence="1"/>
+        <menuitem id="menu_rental_sub" name="Rental" parent="menu_rental" sequence="2" action="rental_list_action"/>
+        
+        <menuitem name="Missions" id="menu_missions" sequence="1" web_icon="space_mission,static/description/space_missions.png"/>
+        <menuitem id="menu_missions_sub" name="Missions" parent="menu_missions" sequence="2" action="missions_list_action"/>
+        
         <menuitem name="Ships" id="menu_ships" sequence="1" web_icon="space_mission,static/description/ships.png"/>
         <menuitem id="menu_ships_sub" name="Ships" parent="menu_ships" sequence="2" action="ships_list_action"/>
-        
 
         <menuitem name="Cooperatives" id="menu_cooperative" sequence="1" web_icon="space_mission,static/description/cooperative.png"/>
-        <menuitem id="menu_cooperative_sub" name="Cooperative" parent="menu_cooperative" sequence="2" action="task_list_action"/>  
+        <menuitem id="menu_cooperative_sub" name="Task" parent="menu_cooperative" sequence="2" action="task_list_action"/>  
         
         <menuitem name="Library" id="menu_library" sequence="1" web_icon="space_mission,static/description/library.png"/>
         <menuitem id="menu_library_sub" name="Library" parent="menu_library" sequence="2" action="library_list_action"/>

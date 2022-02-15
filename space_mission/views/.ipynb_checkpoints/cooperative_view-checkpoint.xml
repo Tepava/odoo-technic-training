@@ -6,7 +6,7 @@
             <field name="name">space.cooperative.list</field>
             <field name="model">space.cooperative.volunteers</field>
             <field name="arch" type="xml">
-                <tree string="Ship List">
+                <tree string="Task List">
                     <field name="name"/>
                     <field name="task_type"/>
                 </tree>
@@ -17,7 +17,7 @@
             <field name="name">space.cooperative.form</field>
             <field name="model">space.cooperative.volunteers</field>
             <field name="arch" type="xml">
-                <form string="Library Form">
+                <form string="Task Form">
                     <header>
                          
                     </header>
@@ -25,7 +25,7 @@
                         <h1 style="width:30%%"><field name="name"/></h1>
                         <group>
                             <group string="Task Information">
-                                <field name="volunteer"/>
+                                <field name="volunteer_ids"/>
                                 <field name="task_type"/>
                                 <field name="task_repeat"/>
                                 <field name="frequency"/>

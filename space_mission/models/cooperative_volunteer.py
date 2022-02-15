@@ -17,9 +17,11 @@ class CooperativeVolunteers(models.Model):
     task_repeat = fields.Boolean(string='Repeat Task', default=False)
     frequency = fields.Integer(string='Number of repetition', default=0)
     #will be replace after by user with a related fields
-    volunteer = fields.Selection(string='Volunteer',selection=[('1','Jean Marc'),('2','Isabella'),('3','Kevin'),('4','Bertrand'),('5','Cécilia'),('6','Historia')])                        
+    #volunteer = fields.Selection(string='Volunteer', selection=[('1','Finéas'),('2','Andrew'),('3','Rosa')])
+    volunteer_ids = fields.Many2one(string='Volunteer', comodel_name='res.partner', required=True)
     leader = fields.Selection(string='Leader', selection=[('1','Finéas'),('2','Andrew'),('3','Rosa')])
     state = fields.Selection(string='State',selection=[('draft','Draft'),('ready','Ready'),('in_progress','In Progress'),('finished','Finished')], default='draft')
+    
     
     @api.onchange('leader')
     def _state_status(self):

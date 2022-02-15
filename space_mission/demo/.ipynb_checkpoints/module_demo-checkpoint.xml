@@ -88,7 +88,6 @@
             <field name="stop_time">2022-02-08 12:00:00</field>
             <field name="task_repeat">True</field>
             <field name="frequency">2</field>
-            <field name="volunteer">1</field>
         </record>
         
         <record model="space.cooperative.volunteers" id="time12_13">
@@ -98,7 +97,6 @@
             <field name="start_time">2022-02-08 12:00:00</field>
             <field name="stop_time">2022-02-08 13:00:00</field>
             <field name="task_repeat">False</field>
-            <field name="volunteer">2</field>
         </record>
         
         <record model="space.cooperative.volunteers" id="time13_14">
@@ -108,7 +106,6 @@
             <field name="start_time">2022-02-08 13:00:00</field>
             <field name="stop_time">2022-02-08 14:00:00</field>
             <field name="task_repeat">False</field>
-            <field name="volunteer">2</field>
         </record>
         
         <record model="space.cooperative.volunteers" id="time14_17">
@@ -119,7 +116,6 @@
             <field name="stop_time">2022-02-08 17:00:00</field>
             <field name="task_repeat">True</field>
             <field name="frequency">2</field>
-            <field name="volunteer">3</field>
         </record>
     </data>
 </odoo>

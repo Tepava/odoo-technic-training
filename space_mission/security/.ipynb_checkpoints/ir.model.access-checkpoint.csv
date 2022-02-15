@@ -6,3 +6,5 @@ library_librarian,Library Librarian,model_space_library,group_librarian,1,1,1,1
 library_customer,Library Customer,model_space_library,group_customer,1,0,0,0
 volunteer_head,Heaad Volunteer,model_space_cooperative_volunteers,group_volunteer_head,1,1,1,1
 volunteer,Volunteer,model_space_cooperative_volunteers,group_volunteer,1,1,1,0
+full_access_mission,Full access mission,model_space_missions,,1,1,1,1
+full_rental,Full rental,model_space_library_rental,,1,1,1,1
