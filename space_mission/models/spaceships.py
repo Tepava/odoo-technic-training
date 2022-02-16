@@ -11,7 +11,9 @@ class Spaceships(models.Model):
     name = fields.Char(string='Name', required=True)
     length = fields.Float(string='Lenght')
     width = fields.Float(string='width')
-    size = fields.Float(compute='_compute_dimension',readonly=True)
+    size = fields.Float(compute='_compute_dimension',readonly=True, store=True)
+    weight = fields.Float(string='Weight', compute='_calculate_ship_weight',readonly=True, store=True )
+    number_engine = fields.Integer(string='Number of engine (1/680t)',compute='_number_of_engine_needed',readonly=True, store=True)
     fuel = fields.Char(string='Fuel Type')
     ship_type = fields.Char(string='Ship Type')
     number_passenger = fields.Integer(string='Number of passenger')
@@ -36,9 +38,29 @@ class Spaceships(models.Model):
         for record in self:
             if record.width > record.length:
                 raise ValidationError("Height can't be superior than length !")
-                
-    @api.constrains('length','width')
-    def _height_verification_equal(self):
-        for record in self:
-            if record.width == record.length:
+            elif record.width == record.length:
                 raise ValidationError("Height can't be equal to length !")
+
+    @api.depends('size')
+    def _calculate_ship_weight(self):
+        for record in self:
+            if record.size:
+                record.weight = (record.size * (3/5))
+            else:
+                continue
+                
+    @api.depends('weight')
+    def _number_of_engine_needed(self):
+        for record in self:
+            if record.weight:
+                num_engine = record.weight/680
+                if num_engine >= int(num_engine):
+                    record.number_engine = int(num_engine) + 1
+                else:
+                    record.number_engine = int(num_engine)
+            else:
+                continue
+                    
+                
+                
+               

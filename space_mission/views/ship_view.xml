@@ -41,6 +41,10 @@
                                     <field name="width"/>
                                     <field name="size"/>
                                 </group>
+                                <group string="Ship Other information">
+                                    <field name="weight"/>
+                                    <field name="number_engine"/>
+                                </group>
                             </page>
                         </notebook>
                     </sheet>

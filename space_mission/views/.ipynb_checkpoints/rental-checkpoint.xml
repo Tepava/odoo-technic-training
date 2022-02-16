@@ -37,6 +37,15 @@
                 </form>
             </field>
         </record>
-        
+        <!-- Map -->
+        <record model="ir.ui.view" id="rental_view_map">
+            <field name="name">space.library.rental.map</field>
+            <field name="model">space.library.rental</field>
+            <field name="arch" type="xml">
+                <map res_partner="customer_ids">
+                    <!--<field name="book_name" string="Book rent"/>-->
+                </map>
+            </field>
+        </record>
     </data>
 </odoo>
