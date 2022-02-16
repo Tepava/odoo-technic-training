@@ -43,7 +43,8 @@
             <field name="model">space.library.rental</field>
             <field name="arch" type="xml">
                 <map res_partner="customer_ids">
-                    <!--<field name="book_name" string="Book rent"/>-->
+                    <field name="book_name" string="Book"/>
+                    <field name="customer_name" string="Customer"/>
                 </map>
             </field>
         </record>

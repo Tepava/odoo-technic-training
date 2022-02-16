@@ -57,5 +57,13 @@
                 </search>
             </field>
         </record>
+        <!-- gantt -->
+        <record model="ir.ui.view" id="cooperative_view_gantt">
+            <field name="name">space.cooperative.gantt</field>
+            <field name="model">space.cooperative.volunteers</field>
+            <field name="arch" type="xml">
+                <gantt date_start="start_time" date_stop="stop_time" default_group_by="leader"/>
+            </field>
+        </record>
     </data>
 </odoo>
