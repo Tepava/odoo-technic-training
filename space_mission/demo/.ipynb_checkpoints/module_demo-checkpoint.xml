@@ -5,28 +5,43 @@
         <record model="space.spaceships" id="large_ships_01">
             <field name="name">Titanium 7.0</field>
             <field name="length">8.24</field>
-            <field name="width">57.9</field>
-            <field name="fuel">Gasoil</field>
+            <field name="width">7</field>
+            <field name="height">57.9</field>
             <field name="ship_type">Large</field>
+            <field name="fuel">Hydrogen</field>
             <field name="number_passenger">29</field>
+            <field name="model">Invinctus</field>
+            <field name="constructors">Yspace</field>
+            <field name="isActive">True</field>
+            <field name="status">finished</field>
         </record>
         
-        <record model="space.spaceships" id="large_ships_02">
+        <record model="space.spaceships" id="large_ships_01">
             <field name="name">Gargantuax</field>
-            <field name="length">12.24</field>
-            <field name="width">118.9</field>
-            <field name="fuel">Gasoil</field>
-            <field name="ship_type">Large</field>
-            <field name="number_passenger">70</field>
+            <field name="length">15.24</field>
+            <field name="width">7</field>
+            <field name="height">257.9</field>
+            <field name="ship_type">Very Large</field>
+            <field name="fuel">Hydrogen</field>
+            <field name="number_passenger">91</field>
+            <field name="model">Caliente</field>
+            <field name="constructors">OneWay</field>
+            <field name="isActive">False</field>
+            <field name="status">developpement</field>
         </record>
         
-        <record model="space.spaceships" id="small_ships_01">
-            <field name="name">Titin</field>
-            <field name="length">6.24</field>
-            <field name="width">40.9</field>
-            <field name="fuel">Gasoil</field>
+        <record model="space.spaceships" id="large_ships_01">
+            <field name="name">Tintin</field>
+            <field name="length">7.24</field>
+            <field name="width">4</field>
+            <field name="height">40.9</field>
+            <field name="fuel">Hydrogen</field>
             <field name="ship_type">Small</field>
-            <field name="number_passenger">7</field>
+            <field name="number_passenger">11</field>
+            <field name="model">MicroShips</field>
+            <field name="constructors">Atomix</field>
+            <field name="isActive">True</field>
+            <field name="status">in_progress</field>
         </record>
         
         <!--Library-->

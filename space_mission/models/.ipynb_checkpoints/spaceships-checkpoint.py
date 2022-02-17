@@ -10,7 +10,8 @@ class Spaceships(models.Model):
     
     name = fields.Char(string='Name', required=True)
     length = fields.Float(string='Lenght')
-    width = fields.Float(string='width')
+    width = fields.Float(string='Width')
+    height = fields.Float(string='Height')
     size = fields.Float(compute='_compute_dimension',readonly=True, store=True)
     weight = fields.Float(string='Weight', compute='_calculate_ship_weight',readonly=True, store=True )
     number_engine = fields.Integer(string='Number of engine (1/680t)',compute='_number_of_engine_needed',readonly=True, store=True)
@@ -28,24 +29,24 @@ class Spaceships(models.Model):
     
     mission_id = fields.One2many(comodel_name='space.missions', inverse_name='spaceship_ids', string='Mission')
     
-    @api.depends('length','width')
+    @api.depends('length','width','height')
     def _compute_dimension(self):
         for record in self:
-            record.size= record.length * record.width
+            record.size= record.length * record.width * record.height
     
-    @api.constrains('length','width')
+    @api.constrains('length','height')
     def _height_verification_inferior(self):
         for record in self:
-            if record.width > record.length:
-                raise ValidationError("Height can't be superior than length !")
-            elif record.width == record.length:
-                raise ValidationError("Height can't be equal to length !")
+            if record.height > record.length:
+                raise ValidationError("Length can't be superior than height !")
+            elif record.height == record.length:
+                raise ValidationError("Length can't be equal to height !")
 
     @api.depends('size')
     def _calculate_ship_weight(self):
         for record in self:
             if record.size:
-                record.weight = (record.size * (3/5))
+                record.weight = (record.size * (2/7))
             else:
                 continue
                 
