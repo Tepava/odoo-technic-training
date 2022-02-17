@@ -10,7 +10,7 @@
     'images' : ['static/src/description/icon.png'],
     'category': 'Uncategorized',
     'version': '0.1',
-    'depends': ['base','contacts'],
+    'depends': ['approvals','contacts','project'],
     'data': [
         'security/space_mission_security.xml',
         'security/ir.model.access.csv',
@@ -19,7 +19,8 @@
         'views/library_view.xml',
         'views/cooperative_view.xml',
         'views/mission_view.xml',
-        'views/rental.xml'
+        'views/rental.xml',
+        'views/project_views_inherit.xml',
     ],
     # only loaded in demonstration mode
     'demo': [

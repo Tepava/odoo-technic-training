@@ -6,7 +6,7 @@
             <field name="name">space.library.list</field>
             <field name="model">space.library</field>
             <field name="arch" type="xml">
-                <tree string="Ship List">
+                <tree string="Book List">
                     <field name="name"/>
                     <field name="author"/>
                     <field name="editor"/>
@@ -32,10 +32,22 @@
                                 <field name="genre"/>
                                 <field name="isbn"/>
                             </group>
+                            <group>
+                                <field name="number_of_copy"/>
+                            </group>
                         </group>
                         <notebook>
                             <page string="Note">
-                                <field name="book_note" style=' max-width: 1150px;  width: 500px'/>
+                                <field name="book_note" style='max-width: 1150px;  width: 500px'/>
+                            </page>
+                            <page string="Copy">
+                                <field name="books_copy_ids">
+                                    <tree editable='bottom'>
+                                        <field name="id" style='width:5px; text-align:left;'/>
+                                        <field name="book_reference"/>
+                                        <field name="book_available"/>
+                                    </tree>
+                                </field>
                             </page>
                         </notebook>
                     </sheet>

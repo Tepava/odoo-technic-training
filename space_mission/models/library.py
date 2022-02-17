@@ -16,6 +16,8 @@ class Library(models.Model):
     isbn = fields.Char(string='ISBN')
     genre = fields.Char(string='Genre')
     book_note = fields.Text(string="Book Note")
+    books_copy_ids = fields.One2many(string='Book Copy',  inverse_name='book_ids',comodel_name='space.library.copy')
+    number_of_copy = fields.Integer(string='Number of Copy', compute='_calcul_of_number_of_copy')
     
     @api.onchange('isbn')
     def _isbn_size_limite(self):
@@ -23,3 +25,8 @@ class Library(models.Model):
         for record in self:
             if record.isbn and len(record.isbn) > 13:
                 raise ValidationError("The ISBN size can't be superior of 13")
+    
+    @api.depends('books_copy_ids')
+    def _calcul_of_number_of_copy(self):
+        for record in self:
+            record.number_of_copy = len(record.books_copy_ids)

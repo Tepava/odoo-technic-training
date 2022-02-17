@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- list -->
+        <record model="ir.ui.view" id="book_copy_view_list">
+            <field name="name">space.library.copy.list</field>
+            <field name="model">space.library.copy</field>
+            <field name="arch" type="xml">
+                <tree string="Book Copy List">
+                    <field name="id"/>
+                    <field name="name"/>
+                    <field name="book_reference"/>
+                    <field name="book_available"/>
+                </tree>
+            </field>
+        </record>
+        <!-- form -->
+        <record model="ir.ui.view" id="book_copy_view_form">
+            <field name="name">space.library.copy.form</field>
+            <field name="model">space.library.copy</field>
+            <field name="arch" type="xml">
+                <form string="Books Form">
+                    <sheet>
+                        <h1 style="width:30%%"><field name="name"/></h1>
+                        <group>
+                            <group string="Information">
+                                
+                                <field name="author"/>
+                                <field name="editor"/>
+                                <field name="publisher"/>
+                                <field name="year_edition"/>
+                                <field name="genre"/>
+                                <field name="isbn"/>
+                            </group>
+                            <group>
+                                <field name="book_reference"/>
+                                <field name="book_ids"/>
+                                <field name="book_available"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Note">
+                                <field name="book_note" style='max-width: 1150px;  width: 500px'/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

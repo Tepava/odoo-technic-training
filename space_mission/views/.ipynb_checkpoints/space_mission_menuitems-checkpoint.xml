@@ -57,6 +57,17 @@
             </field>
         </record>
         
+        <record model="ir.actions.act_window" id="book_list_action">
+            <field name="name">Book Inventory</field>
+            <field name="res_model">space.library.copy</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Add a books
+                </p>
+            </field>
+        </record>
+        
         <menuitem name="Space Missions" id="menu_space_missions" sequence="1" web_icon="space_mission,static/description/space_missions.png"/>
         
         <menuitem id="menu_missions" name="Missions" parent="menu_space_missions" sequence="2"/>
@@ -69,6 +80,7 @@
         <menuitem id="menu_library" name="Library"  parent="menu_space_missions" sequence="2"/>
         <menuitem id="menu_book_sub" name="Books" parent="menu_library" sequence="3" action="library_list_action"/>
         <menuitem id="menu_rental_sub" name="Rental" parent="menu_library" sequence="4" action="rental_list_action"/>
+        <menuitem id="menu_inventory_sub" name="Book Inventory" parent="menu_library" sequence="5" action="book_list_action"/>
 
     </data>
 </odoo>

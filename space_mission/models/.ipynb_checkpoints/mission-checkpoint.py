@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 from odoo import models, fields, api
 from odoo.exceptions import ValidationError 
 
@@ -15,10 +17,10 @@ class SpaceMissions(models.Model):
     ship_number_passenger = fields.Integer(string='Ships Number Passenger', related='spaceship_ids.number_passenger', readonly=True, store=True)
     ship_number_engine = fields.Integer(string='Ships Number Engine', related='spaceship_ids.number_engine', readonly=True, store=True)
     crew_member_ids = fields.Many2many(comodel_name='res.partner', string='Crew Members', domain=[('company_type', '=', 'person')])
-    fuel_ship = fields.Char('Fuel', related='spaceship_ids.fuel', readonly=True)
+    fuel_ship = fields.Char(string='Fuel', related='spaceship_ids.fuel', readonly=True)
     travel_distance = fields.Integer('Travel distance', compute='_fuel_quantity_needed', readonly=True, store=True)
     fuel_needed = fields.Integer('Fuel Needed', compute='_fuel_calculation', readonly=True, store=True)
-    
+    project_id = fields.One2many(comodel_name='project.task', inverse_name='mission_ids', string='Project')
     
     @api.depends('destination')
     def _fuel_quantity_needed(self):

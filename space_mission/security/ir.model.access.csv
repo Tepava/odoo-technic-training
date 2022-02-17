@@ -8,3 +8,4 @@ volunteer_head,Heaad Volunteer,model_space_cooperative_volunteers,group_voluntee
 volunteer,Volunteer,model_space_cooperative_volunteers,group_volunteer,1,1,1,0
 full_access_mission,Full access mission,model_space_missions,,1,1,1,1
 full_rental,Full rental,model_space_library_rental,,1,1,1,1
+full_copy,Full book copy,model_space_library_copy,,1,1,1,1
