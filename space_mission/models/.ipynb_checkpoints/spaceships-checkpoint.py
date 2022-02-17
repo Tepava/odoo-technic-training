@@ -37,8 +37,8 @@ class Spaceships(models.Model):
     @api.constrains('length','width')
     def _height_verification_inferior(self):
         for record in self:
-            if record.length > record.width:
-                raise ValidationError("Height can't be superior than Length !")
+            if record.width > record.length:
+                raise ValidationError("Length can't be superior than width !")
             else:
                 continue
 
