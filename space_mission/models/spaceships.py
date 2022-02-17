@@ -34,13 +34,13 @@ class Spaceships(models.Model):
         for record in self:
             record.size= record.length * record.width * record.height
     
-    @api.constrains('length','height')
+    @api.constrains('length','width')
     def _height_verification_inferior(self):
         for record in self:
-            if record.height > record.length:
-                raise ValidationError("Length can't be superior than height !")
-            elif record.height == record.length:
-                raise ValidationError("Length can't be equal to height !")
+            if record.length > record.width:
+                raise ValidationError("Height can't be superior than Length !")
+            else:
+                continue
 
     @api.depends('size')
     def _calculate_ship_weight(self):
