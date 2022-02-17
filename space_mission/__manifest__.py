@@ -21,6 +21,8 @@
         'views/mission_view.xml',
         'views/rental.xml',
         'views/project_views_inherit.xml',
+        'views/book_copy.xml',
+        'views/approval_views_inherit.xml',
     ],
     # only loaded in demonstration mode
     'demo': [

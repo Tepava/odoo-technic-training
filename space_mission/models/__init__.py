@@ -7,3 +7,4 @@ from . import mission
 from . import rental
 from . import space_project
 from . import book_copy
+from . import coop_approval

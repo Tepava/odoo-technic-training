@@ -12,7 +12,7 @@ class LibraryCopy(models.Model):
         'space.library':'book_ids'
     }
     
-    book_ids = fields.Many2one(string='Origin ID', comodel_name='space.library', required=True, ondelete='cascade')
+    book_ids = fields.Many2one(string='Book', comodel_name='space.library', required=True, ondelete='cascade')
     book_reference = fields.Char(string='Book_reference',)
     book_available = fields.Boolean(string='Available', default='False', readonly=True)
     
