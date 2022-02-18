@@ -24,5 +24,7 @@ class CooperativeVolunteers(models.Model):
         for record in self:
             if record.leader and record.state == 'draft':
                 record.state = 'ready'
+            else:
+                continue
     
     

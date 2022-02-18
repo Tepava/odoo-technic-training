@@ -29,4 +29,8 @@ class Library(models.Model):
     @api.depends('books_copy_ids')
     def _calcul_of_number_of_copy(self):
         for record in self:
-            record.number_of_copy = len(record.books_copy_ids)
+            if record.books_copy_ids:
+                record.number_of_copy = len(record.books_copy_ids)
+            else:
+                continue
+                
