@@ -27,7 +27,7 @@
             <field name="model">Caliente</field>
             <field name="constructors">OneWay</field>
             <field name="isActive">False</field>
-            <field name="status">developpement</field>
+            <field name="status">developement</field>
         </record>
         
         <record model="space.spaceships" id="large_ships_01">
