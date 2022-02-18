@@ -103,6 +103,7 @@
             <field name="stop_time">2022-02-08 12:00:00</field>
             <field name="task_repeat">True</field>
             <field name="frequency">2</field>
+            <field name="volunteer_ids">18</field>
             <field name="leader">2</field>
             <field name="state">draft</field>
         </record>
@@ -114,6 +115,7 @@
             <field name="start_time">2022-02-08 12:00:00</field>
             <field name="stop_time">2022-02-08 13:00:00</field>
             <field name="task_repeat">False</field>
+            <field name="volunteer_ids">29</field>
             <field name="leader">1</field>
             <field name="state">in_progress</field>
         </record>
@@ -125,6 +127,7 @@
             <field name="start_time">2022-02-08 13:00:00</field>
             <field name="stop_time">2022-02-08 14:00:00</field>
             <field name="task_repeat">False</field>
+            <field name="volunteer_ids">27</field>
             <field name="leader">3</field>
             <field name="state">draft</field>
         </record>
@@ -136,6 +139,7 @@
             <field name="start_time">2022-02-08 14:00:00</field>
             <field name="stop_time">2022-02-08 17:00:00</field>
             <field name="task_repeat">True</field>
+            <field name="volunteer_ids">21</field>
             <field name="frequency">2</field>
             <field name="leader">1</field>
             <field name="state">finished</field>
