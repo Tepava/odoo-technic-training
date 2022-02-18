@@ -10,3 +10,5 @@ full_access_mission,Full access mission,model_space_missions,,1,1,1,1
 full_rental,Full rental,model_space_library_rental,,1,1,1,1
 full_copy,Full book copy,model_space_library_copy,,1,1,1,1
 full_cooperator,Full cooperator,model_space_cooperative_volunteers,,1,1,1,1
+full_ship,Full ship,model_space_spaceships,,1,1,1,1
+full_library,Full library,model_space_library,,1,1,1,1
