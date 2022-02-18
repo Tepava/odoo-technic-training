@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        
+        <record model="ir.actions.act_window" id="ships_list_action">
+            <field name="name">Ships</field>
+            <field name="res_model">space.spaceships</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create a Ships
+                </p>
+            </field>
+        </record>
+        
+        <record model="ir.actions.act_window" id="task_list_action">
+            <field name="name">Task</field>
+            <field name="res_model">space.cooperative.volunteers</field>
+            <field name="view_mode">tree,form,gantt</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create a Task
+                </p>
+            </field>
+        </record>
+        
+        <record model="ir.actions.act_window" id="library_list_action">
+            <field name="name">Library</field>
+            <field name="res_model">space.library</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Add a book
+                </p>
+            </field>
+        </record>
+        
+        <record model="ir.actions.act_window" id="missions_list_action">
+            <field name="name">Missions</field>
+            <field name="res_model">space.missions</field>
+            <field name="view_mode">tree,form,graph</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Add a Missions
+                </p>
+            </field>
+        </record>
+        
+        <record model="ir.actions.act_window" id="rental_list_action">
+            <field name="name">Rental</field>
+            <field name="res_model">space.library.rental</field>
+            <field name="view_mode">tree,form,map</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Add a Rental
+                </p>
+            </field>
+        </record>
+        
+        <record model="ir.actions.act_window" id="book_list_action">
+            <field name="name">Book Inventory</field>
+            <field name="res_model">space.library.copy</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Add a books
+                </p>
+            </field>
+        </record>
+        
+        <menuitem name="Space Missions" id="menu_space_missions" sequence="1" web_icon="space_mission,static/description/space_missions.png"/>
+        
+        <menuitem id="menu_missions" name="Missions" parent="menu_space_missions" sequence="2"/>
+        <menuitem id="menu_missions_sub" name="Missions" parent="menu_missions" sequence="3" action="missions_list_action"/>
+        <menuitem id="menu_ships_sub" name="Ships" parent="menu_missions" sequence="4" action="ships_list_action"/>
+
+        <menuitem id="menu_cooperative" name="Cooperatives"  parent="menu_space_missions" sequence="2"/>
+        <menuitem id="menu_cooperative_sub" name="Task" parent="menu_cooperative" sequence="3" action="task_list_action"/>  
+        
+        <menuitem id="menu_library" name="Library"  parent="menu_space_missions" sequence="2"/>
+        <menuitem id="menu_book_sub" name="Books" parent="menu_library" sequence="3" action="library_list_action"/>
+        <menuitem id="menu_rental_sub" name="Rental" parent="menu_library" sequence="4" action="rental_list_action"/>
+        <menuitem id="menu_inventory_sub" name="Book Inventory" parent="menu_library" sequence="5" action="book_list_action"/>
+
+    </data>
+</odoo>

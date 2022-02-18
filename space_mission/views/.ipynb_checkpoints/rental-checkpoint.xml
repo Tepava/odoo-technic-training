@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- ship -->
+        <record model="ir.ui.view" id="rental_view_list">
+            <field name="name">space.library.rental.list</field>
+            <field name="model">space.library.rental</field>
+            <field name="arch" type="xml">
+                <tree string="Rental List">
+                    <field name="name"/>
+                    <field name="book_name"/>
+                    <field name="customer_name"/>
+                    <field name="date_rental"/>
+                    <field name="date_return"/>
+                </tree>
+            </field>
+        </record>
+        
+        <record model="ir.ui.view" id="rental_view_form">
+            <field name="name">space.library.rental.form</field>
+            <field name="model">space.library.rental</field>
+            <field name="arch" type="xml">
+                <form string="Rental Form">
+                    <sheet>
+                        <h1><field name="name"/></h1>
+                        <group>
+                            <group string="Borrowers">
+                                <field name="customer_ids"/>
+                            </group>
+                            <group string="Info">
+                                <field name="book_ids"/>
+                                <field name="date_rental"/>
+                                <field name="date_return"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <!-- Map -->
+        <record model="ir.ui.view" id="rental_view_map">
+            <field name="name">space.library.rental.map</field>
+            <field name="model">space.library.rental</field>
+            <field name="arch" type="xml">
+                <map res_partner="customer_ids">
+                    <field name="book_name" string="Book"/>
+                    <field name="customer_name" string="Customer"/>
+                </map>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- list -->
+        <record model="ir.ui.view" id="mission_view_list">
+            <field name="name">space.missions.list</field>
+            <field name="model">space.missions</field>
+            <field name="arch" type="xml">
+                <tree string="Mission List">
+                    <field name="name"/>
+                    <field name="spaceship_ids"/>
+                    <field name="travel_distance"/>
+                    <field name="destination"/>
+                    <field name="launch_date"/>
+                    <field name="return_date"/>
+                </tree>
+            </field>
+        </record>
+        <!-- form -->
+        <record model="ir.ui.view" id="mission_view_form">
+            <field name="name">space.missions.form</field>
+            <field name="model">space.missions</field>
+            <field name="arch" type="xml">
+                <form string="Mission Form">
+                    <sheet>
+                        <h1><field name="name"/></h1>
+                        <group>
+                            <group string="Ships">
+                                <field name="spaceship_ids"/>
+                                <field name="ship_number_passenger"/>
+                                <field name="destination"/>
+                                <field name="travel_distance"/>
+                                <field name="fuel_needed"/>
+                                
+                            </group>
+                            <group string="Statut">
+                                <field name="launch_date"/>
+                                <field name="return_date"/>
+                                <field name="ship_number_engine"/>
+                                <field name="ship_status"/>
+                                <field name="fuel_ship"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Crew">
+                                <field name="crew_member_ids" widget="many2many">
+                                    <tree>
+                                        <field name="name"/>
+                                        <field name="phone"/>
+                                        <field name="function"/>
+                                        <field name="email"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <!-- Graph -->
+        <record model="ir.ui.view" id="mission_view_graph">
+            <field name="name">space.missions.graph</field>
+            <field name="model">space.missions</field>
+            <field name="arch" type="xml">
+                <graph string='Mission Board'>
+                    <field name="name" string="Mission"/>
+                    <field name="travel_distance" type="measure"/>
+                    <field name="ship_number_passenger" type="measure"/>
+                    <field name="fuel_needed" type="measure"/>
+                </graph>
+            </field>
+        </record>
+    </data>
+</odoo>

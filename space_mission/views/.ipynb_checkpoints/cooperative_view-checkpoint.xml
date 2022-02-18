@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- list -->
+        <record model="ir.ui.view" id="cooperative_view_list">
+            <field name="name">space.cooperative.list</field>
+            <field name="model">space.cooperative.volunteers</field>
+            <field name="arch" type="xml">
+                <tree string="Task List">
+                    <field name="name"/>
+                    <field name="task_type"/>
+                </tree>
+            </field>
+        </record>
+        <!-- form -->
+        <record model="ir.ui.view" id="cooperative_view_form">
+            <field name="name">space.cooperative.form</field>
+            <field name="model">space.cooperative.volunteers</field>
+            <field name="arch" type="xml">
+                <form string="Task Form">
+                    <header>
+                         
+                    </header>
+                    <sheet>
+                        <h1 style="width:30%%"><field name="name"/></h1>
+                        <group>
+                            <group string="Task Information">
+                                <field name="volunteer_ids"/>
+                                <field name="task_type"/>
+                                <field name="task_repeat"/>
+                                <field name="frequency"/>
+                            </group>
+                            <group string="Timer">
+                                <field class="oe_left" name="leader"/>
+                                <field class="oe_left" name="state"/>
+                                <field class="oe_left" name="start_time"/>
+                                <field class="oe_left" name="stop_time"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Note">
+                                <field name="task_description" style=' max-width: 1150px;  width: 500px'/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <!-- search -->
+        <record model="ir.ui.view" id="cooperative_view_search">
+            <field name="name">space.cooperative.search</field>
+            <field name="model">space.cooperative.volunteers</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name"/>
+                    <field name="task_description"/>
+                </search>
+            </field>
+        </record>
+        <!-- gantt -->
+        <record model="ir.ui.view" id="cooperative_view_gantt">
+            <field name="name">space.cooperative.gantt</field>
+            <field name="model">space.cooperative.volunteers</field>
+            <field name="arch" type="xml">
+                <gantt date_start="start_time" date_stop="stop_time" default_group_by="leader"/>
+            </field>
+        </record>
+    </data>
+</odoo>

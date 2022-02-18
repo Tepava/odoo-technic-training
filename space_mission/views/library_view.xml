@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- list -->
+        <record model="ir.ui.view" id="library_view_list">
+            <field name="name">space.library.list</field>
+            <field name="model">space.library</field>
+            <field name="arch" type="xml">
+                <tree string="Book List">
+                    <field name="name"/>
+                    <field name="author"/>
+                    <field name="editor"/>
+                    <field name="genre"/>
+                    <field name="year_edition"/>
+                </tree>
+            </field>
+        </record>
+        <!-- form -->
+        <record model="ir.ui.view" id="library_view_form">
+            <field name="name">space.library.form</field>
+            <field name="model">space.library</field>
+            <field name="arch" type="xml">
+                <form string="Library Form">
+                    <sheet>
+                        <h1 style="width:30%%"><field name="name"/></h1>
+                        <group>
+                            <group string="Information">
+                                <field name="author"/>
+                                <field name="editor"/>
+                                <field name="publisher"/>
+                                <field name="year_edition"/>
+                                <field name="genre"/>
+                                <field name="isbn"/>
+                            </group>
+                            <group>
+                                <field name="number_of_copy"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Note">
+                                <field name="book_note" style='max-width: 1150px;  width: 500px'/>
+                            </page>
+                            <page string="Copy">
+                                <field name="books_copy_ids">
+                                    <tree editable='bottom'>
+                                        <field name="id" style='width:5px; text-align:left;'/>
+                                        <field name="book_reference"/>
+                                        <field name="book_available"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <!-- search -->
+        <record model="ir.ui.view" id="library_view_search">
+            <field name="name">space.library.search</field>
+            <field name="model">space.library</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="author"/>
+                    <field name="isbn"/>
+                </search>
+            </field>
+        </record>
+    </data>
+</odoo>

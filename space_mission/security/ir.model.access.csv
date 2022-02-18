@@ -1,0 +1,12 @@
+id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
+space_admin,Space Admin,model_space_spaceships,group_space_admin,1,1,1,1
+space_crew,Space Crew,model_space_spaceships,group_space_crew,1,1,1,0
+space_general,Space General,model_space_spaceships,group_space_general,1,0,0,0
+library_librarian,Library Librarian,model_space_library,group_librarian,1,1,1,1
+library_customer,Library Customer,model_space_library,group_customer,1,0,0,0
+volunteer_head,Heaad Volunteer,model_space_cooperative_volunteers,group_volunteer_head,1,1,1,1
+volunteer,Volunteer,model_space_cooperative_volunteers,group_volunteer,1,1,1,0
+full_access_mission,Full access mission,model_space_missions,,1,1,1,1
+full_rental,Full rental,model_space_library_rental,,1,1,1,1
+full_copy,Full book copy,model_space_library_copy,,1,1,1,1
+full_cooperator,Full cooperator,model_space_cooperative_volunteers,,1,1,1,1
